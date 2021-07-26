@@ -40,7 +40,7 @@ fn main() {
                 .args([dir_path])
                 .spawn()
                 .unwrap();
-            mkdir_command_exec.wait().expect("mkdir failed");
+            mkdir_command_exec.wait().expect("mkdir failed"); // wait for its completion
             let tar_args = [
                 "-xf", path.to_str().unwrap(),
                 "--directory", dir_path
@@ -49,7 +49,7 @@ fn main() {
                 .args(tar_args)
                 .spawn()
                 .unwrap();
-            tar_command_exec.wait().expect("tar failed");
+            tar_command_exec.wait().expect("tar failed"); // wait for its completion
         });
     println!("Finished---------------------");
 }
