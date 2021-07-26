@@ -1,5 +1,6 @@
 [package]
-name = "ParallelUntar"
+name = "parallel_untar"
+authors = ["feng liang <feng.liang@kaust.edu.sa>"]
 version = "0.1.0"
 edition = "2018"
 
