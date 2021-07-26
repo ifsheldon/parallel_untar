@@ -14,6 +14,7 @@ struct Opts {
 
 fn main() {
     // configure the global thread pool
+    // commenting out the below line will by default use all logical cores on CPU
     rayon::ThreadPoolBuilder::new().num_threads(32).build_global().unwrap();
     // parse arguments
     let opts: Opts = Opts::parse();
