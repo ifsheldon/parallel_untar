@@ -40,3 +40,10 @@ dataset/
         b/
             etc.jpg
 ```
+
+## Performance
+In case you are not familiar with drives etc., simply increasing the number of threads may not give you better performance,
+
+like `rayon::ThreadPoolBuilder::new().num_threads(64).build_global().unwrap();`
+
+since the speed of your drive is very likely to be the bottleneck unless you don't use parallelization at all.
