@@ -2,9 +2,9 @@ use std::process::Command;
 use rayon::prelude::*;
 use std::path::PathBuf;
 use glob::glob;
-use clap::Clap;
+use clap::Parser;
 
-#[derive(Clap)]
+#[derive(Parser, Debug)]
 struct Opts {
     /// file path pattern
     file_path_pattern: String,
